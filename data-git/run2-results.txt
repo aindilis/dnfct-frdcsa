@@ -1,0 +1,412 @@
+
+Creating dp.pddl file from /var/lib/myfrdcsa/sandbox/dnf-contingent-20160811/dnf-contingent-20160811/DNFct_run/PDDL/elogistics/domain1.pddl and /var/lib/myfrdcsa/sandbox/dnf-contingent-20160811/dnf-contingent-20160811/DNFct_run/PDDL/elogistics/pfile1
+Converting pddl to pl
+Output file: pddl2pl.pl
+
+
+Performing statistical analysis ...
+Running DNFct ...
+DNF version 1.0 - Built date: Sun Mar 27 23:34:46 MDT 2011
+Building domain...
+CNF Cost: 16, DNF Cost: 2
+Initial Computation Time: 0.000 Init size=2 x 28 x 14
+Initial CState Size = 2
+done.
+
+maxh = 0, cs size = 2 
+  Found a plan: 
+0: sense_package_loc_t(package1,bos_po,bos_truck)
+  IF: at_ol(package1,bos_po)
+  1: load_truck_loc(package1,bos_truck,bos_po,bos)
+  2: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+  3: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+  4: unload_truck_ap(package1,bos_truck,bos_airport,bos)
+  IF: NOT at_ol(package1,bos_po)
+  5: load_truck_loc(package1,pgh_truck,pgh_po,pgh)
+  6: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+  7: unload_truck_ap(package1,pgh_truck,pgh_airport,pgh)
+  8: load_airplane(package1,airplane1,pgh_airport)
+  9: fly_airplane(airplane1,pgh_airport,bos_airport)
+  10: unload_airplane(package1,airplane1,bos_airport)
+  Size of solution: 11	 Depth: 7
+
+STATISTICS
+---------------------
+Total time: 0.004 (sec) 
+  Reading: 0.001 (sec) [18.12 %]
+  Preprocessing: 0.002 (sec) [57.37 %]
+  Search: 0.001 (sec) [24.52 %]
+Initial CState Size: States = 2, size = 28
+Total states allocated: 44
+Total cstate(s): 48
+Total cstate(s) expanded: 25
+Creating dp.pddl file from /var/lib/myfrdcsa/sandbox/dnf-contingent-20160811/dnf-contingent-20160811/DNFct_run/PDDL/elogistics/domain1.pddl and /var/lib/myfrdcsa/sandbox/dnf-contingent-20160811/dnf-contingent-20160811/DNFct_run/PDDL/elogistics/pfile3
+Converting pddl to pl
+Output file: pddl2pl.pl
+
+
+Performing statistical analysis ...
+Running DNFct ...
+DNF version 1.0 - Built date: Sun Mar 27 23:34:46 MDT 2011
+Building domain...
+CNF Cost: 44, DNF Cost: 3
+Initial Computation Time: 0.000 Init size=3 x 40 x 20
+Initial CState Size = 3
+done.
+
+maxh = 0, cs size = 3 
+  Found a plan: 
+0: sense_package_loc_t(package1,pgh_po,pgh_truck)
+  IF: at_ol(package1,pgh_po)
+  1: load_truck_loc(package1,pgh_truck,pgh_po,pgh)
+  2: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+  3: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  4: unload_truck_ap(package1,pgh_truck,pgh_airport,pgh)
+  5: drive_truck_ap_loc(pgh_truck,pgh_airport,pgh_po,pgh)
+  6: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+  7: load_airplane(package1,airplane1,pgh_airport)
+  8: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+  9: fly_airplane(airplane1,pgh_airport,bos_airport)
+  10: unload_airplane(package1,airplane1,bos_airport)
+  IF: NOT at_ol(package1,pgh_po)
+  11: sense_package_loc_t(package1,bos_po,bos_truck)
+  IF: at_ol(package1,bos_po)
+    12: load_truck_loc(package1,bos_truck,bos_po,bos)
+    13: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+    14: fly_airplane(airplane1,pgh_airport,phx_airport)
+    15: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+    16: unload_truck_ap(package1,bos_truck,bos_airport,bos)
+      IF: NOT at_ol(package1,bos_po)
+    17: load_truck_loc(package1,phx_truck,phx_po,phx)
+    18: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+    19: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+    20: unload_truck_ap(package1,phx_truck,phx_airport,phx)
+    21: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+    22: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+    23: fly_airplane(airplane1,pgh_airport,phx_airport)
+    24: load_airplane(package1,airplane1,phx_airport)
+    25: fly_airplane(airplane1,phx_airport,pgh_airport)
+    26: unload_airplane(package1,airplane1,pgh_airport)
+    27: fly_airplane(airplane1,pgh_airport,phx_airport)
+    28: drive_truck_ap_loc(bos_truck,bos_airport,bos_po,bos)
+    29: drive_truck_ap_loc(pgh_truck,pgh_airport,pgh_po,pgh)
+    30: fly_airplane(airplane1,phx_airport,bos_airport)
+    31: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+    32: fly_airplane(airplane1,bos_airport,phx_airport)
+    33: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+    34: fly_airplane(airplane1,phx_airport,pgh_airport)
+    GOTO 5
+Size of solution: 35	 Depth: 26
+
+STATISTICS
+---------------------
+Total time: 0.008 (sec) 
+  Reading: 0.001 (sec) [9.60 %]
+  Preprocessing: 0.002 (sec) [25.20 %]
+  Search: 0.005 (sec) [65.20 %]
+Initial CState Size: States = 3, size = 60
+Total states allocated: 192
+Total cstate(s): 206
+Total cstate(s) expanded: 91
+Creating dp.pddl file from /var/lib/myfrdcsa/sandbox/dnf-contingent-20160811/dnf-contingent-20160811/DNFct_run/PDDL/elogistics/domain1.pddl and /var/lib/myfrdcsa/sandbox/dnf-contingent-20160811/dnf-contingent-20160811/DNFct_run/PDDL/elogistics/pfile5
+Converting pddl to pl
+Output file: pddl2pl.pl
+
+
+Performing statistical analysis ...
+Running DNFct ...
+DNF version 1.0 - Built date: Sun Mar 27 23:34:46 MDT 2011
+Building domain...
+CNF Cost: 70, DNF Cost: 2
+Initial Computation Time: 0.000 Init size=2 x 80 x 40
+Initial CState Size = 2
+done.
+
+maxh = 0, cs size = 2 maxh = 1, cs size = 1 maxh = 2, cs size = 1 
+  Found a plan: 
+0: sense_package_loc_t(package1,pgh_po,pgh_truck)
+  IF: at_ol(package1,pgh_po)
+  1: load_truck_loc(package3,bos_truck,bos_po,bos)
+  2: load_truck_loc(package2,pgh_truck,pgh_po,pgh)
+  3: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  4: unload_truck_loc(package3,bos_truck,bos_po,bos)
+  5: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+  6: unload_truck_ap(package2,pgh_truck,pgh_airport,pgh)
+  7: load_truck_loc(package3,bos_truck,bos_po,bos)
+  8: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+  9: drive_truck_ap_loc(pgh_truck,pgh_airport,pgh_po,pgh)
+  10: unload_truck_loc(package3,bos_truck,bos_po,bos)
+  11: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+  12: load_truck_loc(package1,pgh_truck,pgh_po,pgh)
+  13: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  14: drive_truck_ap_loc(bos_truck,bos_airport,bos_po,bos)
+  15: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+  16: load_truck_loc(package3,bos_truck,bos_po,bos)
+  17: load_truck_ap(package2,pgh_truck,pgh_airport,pgh)
+  18: unload_truck_ap(package1,pgh_truck,pgh_airport,pgh)
+  19: unload_truck_loc(package3,bos_truck,bos_po,bos)
+  20: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+  21: unload_truck_ap(package2,pgh_truck,pgh_airport,pgh)
+  22: load_truck_loc(package3,bos_truck,bos_po,bos)
+  23: drive_truck_ap_loc(pgh_truck,pgh_airport,pgh_po,pgh)
+  24: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  25: unload_truck_loc(package3,bos_truck,bos_po,bos)
+  26: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+  27: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+  28: load_airplane(package2,airplane1,pgh_airport)
+  29: drive_truck_ap_loc(bos_truck,bos_airport,bos_po,bos)
+  30: load_airplane(package1,airplane1,pgh_airport)
+  31: load_truck_loc(package3,bos_truck,bos_po,bos)
+  32: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  33: fly_airplane(airplane1,pgh_airport,phx_airport)
+  34: unload_airplane(package2,airplane1,phx_airport)
+  35: fly_airplane(airplane1,phx_airport,bos_airport)
+  36: unload_airplane(package1,airplane1,bos_airport)
+  37: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+  38: fly_airplane(airplane1,bos_airport,phx_airport)
+  39: unload_truck_ap(package3,bos_truck,bos_airport,bos)
+  40: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+  41: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+  42: fly_airplane(airplane1,phx_airport,bos_airport)
+  43: load_airplane(package3,airplane1,bos_airport)
+  44: fly_airplane(airplane1,bos_airport,phx_airport)
+  45: drive_truck_ap_loc(pgh_truck,pgh_airport,pgh_po,pgh)
+  46: unload_airplane(package3,airplane1,phx_airport)
+  47: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+  48: fly_airplane(airplane1,phx_airport,pgh_airport)
+  49: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  50: fly_airplane(airplane1,pgh_airport,phx_airport)
+  51: fly_airplane(airplane1,phx_airport,bos_airport)
+  52: load_truck_ap(package3,phx_truck,phx_airport,phx)
+  53: fly_airplane(airplane1,bos_airport,phx_airport)
+  54: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+  55: drive_truck_ap_loc(bos_truck,bos_airport,bos_po,bos)
+  56: unload_truck_loc(package3,phx_truck,phx_po,phx)
+  57: drive_truck_ap_loc(pgh_truck,pgh_airport,pgh_po,pgh)
+  58: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  59: fly_airplane(airplane1,phx_airport,pgh_airport)
+  60: fly_airplane(airplane1,pgh_airport,bos_airport)
+  61: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+  62: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+  63: fly_airplane(airplane1,bos_airport,phx_airport)
+  64: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+  65: drive_truck_ap_loc(pgh_truck,pgh_airport,pgh_po,pgh)
+  66: load_truck_loc(package3,phx_truck,phx_po,phx)
+  67: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  68: unload_truck_ap(package3,phx_truck,phx_airport,phx)
+  69: load_airplane(package3,airplane1,phx_airport)
+  70: drive_truck_ap_loc(bos_truck,bos_airport,bos_po,bos)
+  71: fly_airplane(airplane1,phx_airport,pgh_airport)
+  72: unload_airplane(package3,airplane1,pgh_airport)
+  IF: NOT at_ol(package1,pgh_po)
+  73: load_truck_loc(package3,phx_truck,phx_po,phx)
+  74: load_truck_loc(package2,bos_truck,bos_po,bos)
+  75: load_truck_loc(package1,phx_truck,phx_po,phx)
+  76: fly_airplane(airplane1,pgh_airport,bos_airport)
+  77: unload_truck_loc(package3,phx_truck,phx_po,phx)
+  78: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+  79: unload_truck_loc(package2,bos_truck,bos_po,bos)
+  80: load_truck_loc(package3,phx_truck,phx_po,phx)
+  81: unload_truck_loc(package1,phx_truck,phx_po,phx)
+  82: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  83: load_truck_loc(package2,bos_truck,bos_po,bos)
+  84: unload_truck_ap(package3,phx_truck,phx_airport,phx)
+  85: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+  86: unload_truck_loc(package2,bos_truck,bos_po,bos)
+  87: load_truck_loc(package1,phx_truck,phx_po,phx)
+  88: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  89: load_truck_loc(package2,bos_truck,bos_po,bos)
+  90: load_truck_ap(package3,phx_truck,phx_airport,phx)
+  91: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+  92: unload_truck_ap(package2,bos_truck,bos_airport,bos)
+  93: unload_truck_ap(package1,phx_truck,phx_airport,phx)
+  94: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+  95: unload_truck_loc(package3,phx_truck,phx_po,phx)
+  96: drive_truck_ap_loc(bos_truck,bos_airport,bos_po,bos)
+  97: drive_truck_ap_loc(pgh_truck,pgh_airport,pgh_po,pgh)
+  98: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  99: load_airplane(package2,airplane1,bos_airport)
+  100: load_truck_ap(package1,phx_truck,phx_airport,phx)
+  101: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+  102: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+  103: unload_truck_ap(package1,phx_truck,phx_airport,phx)
+  104: fly_airplane(airplane1,bos_airport,phx_airport)
+  105: unload_airplane(package2,airplane1,phx_airport)
+  106: load_airplane(package1,airplane1,phx_airport)
+  107: fly_airplane(airplane1,phx_airport,bos_airport)
+  108: unload_airplane(package1,airplane1,bos_airport)
+  GOTO 63
+Size of solution: 109	 Depth: 73
+
+STATISTICS
+---------------------
+Total time: 0.046 (sec) 
+  Reading: 0.002 (sec) [3.89 %]
+  Preprocessing: 0.003 (sec) [6.13 %]
+  Search: 0.041 (sec) [89.98 %]
+Initial CState Size: States = 2, size = 80
+Total states allocated: 1485
+Total cstate(s): 1491
+Total cstate(s) expanded: 376
+Creating dp.pddl file from /var/lib/myfrdcsa/sandbox/dnf-contingent-20160811/dnf-contingent-20160811/DNFct_run/PDDL/elogistics/domain1.pddl and /var/lib/myfrdcsa/sandbox/dnf-contingent-20160811/dnf-contingent-20160811/DNFct_run/PDDL/elogistics/pfile7
+Converting pddl to pl
+Output file: pddl2pl.pl
+
+
+Performing statistical analysis ...
+Running DNFct ...
+DNF version 1.0 - Built date: Sun Mar 27 23:34:46 MDT 2011
+Building domain...
+CNF Cost: 474, DNF Cost: 3
+Initial Computation Time: 0.000 Init size=3 x 80 x 40
+Initial CState Size = 3
+done.
+
+maxh = 0, cs size = 3 maxh = 1, cs size = 1 maxh = 2, cs size = 1 
+  Found a plan: 
+0: sense_package_loc_t(package1,phx_po,phx_truck)
+  IF: at_ol(package1,phx_po)
+  1: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+  2: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+  3: load_truck_loc(package3,phx_truck,phx_po,phx)
+  4: load_truck_loc(package1,phx_truck,phx_po,phx)
+  5: fly_airplane(airplane1,pgh_airport,bos_airport)
+  6: unload_truck_loc(package3,phx_truck,phx_po,phx)
+  7: drive_truck_ap_loc(bos_truck,bos_airport,bos_po,bos)
+  8: load_truck_loc(package2,bos_truck,bos_po,bos)
+  9: unload_truck_loc(package1,phx_truck,phx_po,phx)
+  10: load_truck_loc(package3,phx_truck,phx_po,phx)
+  11: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  12: unload_truck_loc(package2,bos_truck,bos_po,bos)
+  13: unload_truck_ap(package3,phx_truck,phx_airport,phx)
+  14: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+  15: load_truck_loc(package2,bos_truck,bos_po,bos)
+  16: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+  17: load_truck_loc(package1,phx_truck,phx_po,phx)
+  18: unload_truck_ap(package2,bos_truck,bos_airport,bos)
+  19: drive_truck_ap_loc(pgh_truck,pgh_airport,pgh_po,pgh)
+  20: unload_truck_loc(package1,phx_truck,phx_po,phx)
+  21: load_airplane(package2,airplane1,bos_airport)
+  22: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  23: fly_airplane(airplane1,bos_airport,phx_airport)
+  24: unload_airplane(package2,airplane1,phx_airport)
+  25: load_airplane(package3,airplane1,phx_airport)
+  26: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+  27: fly_airplane(airplane1,phx_airport,pgh_airport)
+  28: unload_airplane(package3,airplane1,pgh_airport)
+  29: fly_airplane(airplane1,pgh_airport,bos_airport)
+  30: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+  31: load_truck_loc(package1,phx_truck,phx_po,phx)
+  32: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  33: fly_airplane(airplane1,bos_airport,phx_airport)
+  34: unload_truck_ap(package1,phx_truck,phx_airport,phx)
+  35: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+  36: load_airplane(package1,airplane1,phx_airport)
+  37: fly_airplane(airplane1,phx_airport,pgh_airport)
+  38: unload_airplane(package1,airplane1,pgh_airport)
+  39: fly_airplane(airplane1,pgh_airport,phx_airport)
+  40: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  41: drive_truck_ap_loc(bos_truck,bos_airport,bos_po,bos)
+  42: load_truck_ap(package1,pgh_truck,pgh_airport,pgh)
+  43: drive_truck_ap_loc(pgh_truck,pgh_airport,pgh_po,pgh)
+  44: fly_airplane(airplane1,phx_airport,pgh_airport)
+  45: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+  46: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+  47: fly_airplane(airplane1,pgh_airport,phx_airport)
+  48: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+  49: fly_airplane(airplane1,phx_airport,bos_airport)
+  50: fly_airplane(airplane1,bos_airport,pgh_airport)
+  51: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+  52: drive_truck_ap_loc(bos_truck,bos_airport,bos_po,bos)
+  53: unload_truck_ap(package1,pgh_truck,pgh_airport,pgh)
+  54: drive_truck_ap_loc(pgh_truck,pgh_airport,pgh_po,pgh)
+  55: load_airplane(package1,airplane1,pgh_airport)
+  56: fly_airplane(airplane1,pgh_airport,bos_airport)
+  57: unload_airplane(package1,airplane1,bos_airport)
+  IF: NOT at_ol(package1,phx_po)
+  58: sense_package_loc_t(package1,bos_po,bos_truck)
+  IF: at_ol(package1,bos_po)
+    59: fly_airplane(airplane1,pgh_airport,phx_airport)
+    60: load_truck_loc(package1,bos_truck,bos_po,bos)
+    61: load_truck_loc(package2,pgh_truck,pgh_po,pgh)
+    62: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+    63: unload_truck_ap(package2,pgh_truck,pgh_airport,pgh)
+    64: load_truck_loc(package3,bos_truck,bos_po,bos)
+    65: fly_airplane(airplane1,phx_airport,pgh_airport)
+    66: load_truck_ap(package2,pgh_truck,pgh_airport,pgh)
+    67: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+    68: unload_truck_ap(package1,bos_truck,bos_airport,bos)
+    69: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+    70: unload_truck_ap(package2,pgh_truck,pgh_airport,pgh)
+    71: load_airplane(package2,airplane1,pgh_airport)
+    72: fly_airplane(airplane1,pgh_airport,phx_airport)
+    73: unload_airplane(package2,airplane1,phx_airport)
+    74: drive_truck_ap_loc(pgh_truck,pgh_airport,pgh_po,pgh)
+    75: unload_truck_ap(package3,bos_truck,bos_airport,bos)
+    76: drive_truck_ap_loc(bos_truck,bos_airport,bos_po,bos)
+    77: fly_airplane(airplane1,phx_airport,bos_airport)
+    78: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+    79: load_airplane(package3,airplane1,bos_airport)
+    80: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+    81: fly_airplane(airplane1,bos_airport,pgh_airport)
+    82: unload_airplane(package3,airplane1,pgh_airport)
+      IF: NOT at_ol(package1,bos_po)
+    83: fly_airplane(airplane1,pgh_airport,phx_airport)
+    84: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+    85: fly_airplane(airplane1,phx_airport,bos_airport)
+    86: load_truck_loc(package2,pgh_truck,pgh_po,pgh)
+    87: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+    88: unload_truck_ap(package2,pgh_truck,pgh_airport,pgh)
+    89: drive_truck_ap_loc(pgh_truck,pgh_airport,pgh_po,pgh)
+    90: load_truck_loc(package1,pgh_truck,pgh_po,pgh)
+    91: drive_truck_ap_loc(bos_truck,bos_airport,bos_po,bos)
+    92: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+    93: unload_truck_loc(package1,pgh_truck,pgh_po,pgh)
+    94: load_truck_loc(package3,bos_truck,bos_po,bos)
+    95: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+    96: load_truck_ap(package2,pgh_truck,pgh_airport,pgh)
+    97: unload_truck_loc(package3,bos_truck,bos_po,bos)
+    98: fly_airplane(airplane1,bos_airport,phx_airport)
+    99: unload_truck_ap(package2,pgh_truck,pgh_airport,pgh)
+    100: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+    101: drive_truck_ap_loc(pgh_truck,pgh_airport,pgh_po,pgh)
+    102: fly_airplane(airplane1,phx_airport,pgh_airport)
+    103: load_airplane(package2,airplane1,pgh_airport)
+    104: load_truck_loc(package3,bos_truck,bos_po,bos)
+    105: load_truck_loc(package1,pgh_truck,pgh_po,pgh)
+    106: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+    107: unload_truck_ap(package3,bos_truck,bos_airport,bos)
+    108: unload_truck_loc(package1,pgh_truck,pgh_po,pgh)
+    109: drive_truck_ap_loc(bos_truck,bos_airport,bos_po,bos)
+    110: drive_truck_loc_ap(phx_truck,phx_po,phx_airport,phx)
+    111: load_truck_loc(package1,pgh_truck,pgh_po,pgh)
+    112: fly_airplane(airplane1,pgh_airport,phx_airport)
+    113: unload_airplane(package2,airplane1,phx_airport)
+    114: fly_airplane(airplane1,phx_airport,pgh_airport)
+    115: drive_truck_ap_loc(phx_truck,phx_airport,phx_po,phx)
+    116: drive_truck_loc_ap(pgh_truck,pgh_po,pgh_airport,pgh)
+    117: fly_airplane(airplane1,pgh_airport,bos_airport)
+    118: drive_truck_loc_ap(bos_truck,bos_po,bos_airport,bos)
+    119: load_airplane(package3,airplane1,bos_airport)
+    120: fly_airplane(airplane1,bos_airport,pgh_airport)
+    121: unload_airplane(package3,airplane1,pgh_airport)
+    GOTO 51
+Size of solution: 122	 Depth: 58
+
+STATISTICS
+---------------------
+Total time: 0.092 (sec) 
+  Reading: 0.002 (sec) [1.95 %]
+  Preprocessing: 0.003 (sec) [2.91 %]
+  Search: 0.088 (sec) [95.14 %]
+Initial CState Size: States = 3, size = 120
+Total states allocated: 2745
+Total cstate(s): 2761
+Total cstate(s) expanded: 804
+Creating dp.pddl file from /var/lib/myfrdcsa/sandbox/dnf-contingent-20160811/dnf-contingent-20160811/DNFct_run/PDDL/elogistics/domain1.pddl and /var/lib/myfrdcsa/sandbox/dnf-contingent-20160811/dnf-contingent-20160811/DNFct_run/PDDL/elogistics/phuge
+Converting pddl to pl
+Output file: pddl2pl.pl
+
+
+Performing statistical analysis ...
+Running DNFct ...

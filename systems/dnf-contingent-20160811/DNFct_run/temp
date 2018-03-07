@@ -1,0 +1,9 @@
+DNF version 1.0 - Built date: Sun Mar 27 23:34:46 MDT 2011
+Building domain...
+CNF Cost: 9765786, DNF Cost: 5
+Initial Computation Time: 0.002 Init size=5 x 372 x 186
+Initial CState Size = 5
+done.
+
+maxh = 0, cs size = 5 No check, count(500) = 0
+maxh = 1, cs size = 1 maxh = 2, cs size = 1 

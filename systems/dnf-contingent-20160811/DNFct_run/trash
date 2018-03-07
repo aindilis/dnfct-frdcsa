@@ -1,0 +1,31 @@
+    Time 0: 0 actions
+Time 0: 0 actions and 61 fluents
+    Time _G9645: 79 actions
+Time _G9645: 79 actions and 104 fluents 
+    Time _G8383: 281 actions
+Time _G8383: 281 actions and 171 fluents 
+    Time _G11903: 470 actions
+Time _G11903: 470 actions and 216 fluents 
+    Time _G14888: 515 actions
+Time _G14888: 515 actions and 216 fluents 
+    Time _G14699: 515 actions
+Time _G14699: 515 actions and 216 fluents 
+There are 0 new fluents
+There are 216 true and 406 false 
+There are 30 fluents that are always true.
+There are 220 fluents that are always false.
+Reduced from 510 to 510 actions
+Time 1 has 12 actions
+Time 2 has 54 actions
+Time 3 has 150 actions
+Time 4 has 198 actions
+Time 5 has 302 actions
+Time 6 has 382 actions
+Time 7 has 510 actions
+Time 8 has 510 actions
+starting 'theory_0.al'
+completed theory
+Combination of Initial States:
+    Original Number of States: 3125
+    Final Number of States:    5
+    Execution Time: _G31614ms.
