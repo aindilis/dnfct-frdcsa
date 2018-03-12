@@ -1,0 +1,94 @@
+
+Creating dp.pddl file from /var/lib/myfrdcsa/codebases/internal/verber/data/worldmodel/templates/contingent/dnfct/indigent_logistics/current/indigent_logistics.d.verb and /var/lib/myfrdcsa/codebases/internal/verber/data/worldmodel/templates/contingent/dnfct/indigent_logistics/current/indigent_logistics.p.verb
+Converting pddl to pl
+Output file: pddl2pl.pl
+
+
+Performing statistical analysis ...
+Running DNFct ...
+DNF version 1.0 - Built date: Sun Mar 27 23:34:46 MDT 2011
+Building domain...
+CNF Cost: 39, DNF Cost: 8
+Initial Computation Time: 0.000 Init size=8 x 108 x 33
+Initial CState Size = 8
+done.
+
+maxh = 0, cs size = 8 No check, count(500) = 0
+
+  Found a plan: 
+0: move(john,startinglocation,cricketwirelessstore1)
+1: sense_object_t(freecellularphone1,cricketwirelessstore1,john)
+IF: at_ol(freecellularphone1,cricketwirelessstore1)
+  2: obtain(john,freecellularphone1,cricketwirelessstore1)
+  3: move(john,cricketwirelessstore1,foodpantry1)
+  4: sense_object_t(food1,foodpantry1,john)
+IF: at_ol(food1,foodpantry1)
+    5: obtain(john,food1,foodpantry1)
+    6: move(john,foodpantry1,soupkitchen1)
+    7: sense_object_t(warmmeal1,soupkitchen1,john)
+IF: at_ol(warmmeal1,soupkitchen1)
+      8: obtain(john,warmmeal1,soupkitchen1)
+      9: finish(food1,john)
+IF: NOT at_ol(warmmeal1,soupkitchen1)
+      10: move(john,soupkitchen1,nonexistent2)
+      11: obtain(john,warmmeal1,nonexistent2)
+      12: finish(food1,john)
+IF: NOT at_ol(food1,foodpantry1)
+    13: move(john,foodpantry1,nonexistent1)
+    14: obtain(john,food1,nonexistent1)
+    15: move(john,nonexistent1,nonexistent2)
+    16: sense_object_t(warmmeal1,nonexistent2,john)
+IF: at_ol(warmmeal1,nonexistent2)
+      17: obtain(john,warmmeal1,nonexistent2)
+      18: finish(food1,john)
+IF: NOT at_ol(warmmeal1,nonexistent2)
+      19: move(john,nonexistent2,soupkitchen1)
+      20: obtain(john,warmmeal1,soupkitchen1)
+      21: finish(food1,john)
+IF: NOT at_ol(freecellularphone1,cricketwirelessstore1)
+  22: move(john,cricketwirelessstore1,nonexistent2)
+  23: sense_object_t(warmmeal1,nonexistent2,john)
+IF: at_ol(warmmeal1,nonexistent2)
+    24: obtain(john,warmmeal1,nonexistent2)
+    25: move(john,nonexistent2,nonexistent1)
+    26: sense_object_t(food1,nonexistent1,john)
+IF: at_ol(food1,nonexistent1)
+      27: obtain(john,food1,nonexistent1)
+      28: move(john,nonexistent1,nonexistent3)
+      29: obtain(john,freecellularphone1,nonexistent3)
+      30: finish(food1,john)
+IF: NOT at_ol(food1,nonexistent1)
+      31: move(john,nonexistent1,foodpantry1)
+      32: obtain(john,food1,foodpantry1)
+      33: move(john,foodpantry1,nonexistent3)
+      34: obtain(john,freecellularphone1,nonexistent3)
+      35: finish(food1,john)
+IF: NOT at_ol(warmmeal1,nonexistent2)
+    36: move(john,nonexistent2,soupkitchen1)
+    37: obtain(john,warmmeal1,soupkitchen1)
+    38: move(john,soupkitchen1,cricketwirelessstore1)
+    39: move(john,cricketwirelessstore1,foodpantry1)
+    40: sense_object_t(food1,foodpantry1,john)
+IF: at_ol(food1,foodpantry1)
+      41: obtain(john,food1,foodpantry1)
+      42: move(john,foodpantry1,nonexistent3)
+      43: obtain(john,freecellularphone1,nonexistent3)
+      44: finish(food1,john)
+IF: NOT at_ol(food1,foodpantry1)
+      45: move(john,foodpantry1,nonexistent1)
+      46: obtain(john,food1,nonexistent1)
+      47: move(john,nonexistent1,nonexistent3)
+      48: obtain(john,freecellularphone1,nonexistent3)
+      49: finish(food1,john)
+      Size of solution: 50	 Depth: 14
+
+STATISTICS
+---------------------
+Total time: 0.012 (sec) 
+  Reading: 0.002 (sec) [13.25 %]
+  Preprocessing: 0.003 (sec) [21.90 %]
+  Search: 0.008 (sec) [64.85 %]
+Initial CState Size: States = 8, size = 264
+Total states allocated: 184
+Total cstate(s): 184
+Total cstate(s) expanded: 76
